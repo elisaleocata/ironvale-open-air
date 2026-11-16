@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ironvale Open Air – 8 to 11 July 2027</title>
+  <meta name="description" content="Ironvale Open Air, a fictional four-day rock and metal festival: line up, timetable and tickets.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#lineup">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top"><img src="images/logo.svg" alt="" width="32" height="32">Ironvale</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#lineup">Line up</a></li>
+        <li><a href="#timetable">Timetable</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1546708770-589dab7b22c7?auto=format&fit=crop&q=70&w=1600" srcset="https://images.unsplash.com/photo-1546708770-589dab7b22c7?auto=format&fit=crop&q=70&w=960 960w, https://images.unsplash.com/photo-1546708770-589dab7b22c7?auto=format&fit=crop&q=70&w=1600 1600w, https://images.unsplash.com/photo-1546708770-589dab7b22c7?auto=format&fit=crop&q=70&w=2400 2400w" sizes="100vw" alt="" width="1600" height="900" fetchpriority="high">
+      <div class="hero-text">
+        <p class="dates">8 – 11 July 2027</p>
+        <h1>Ironvale <span>Open Air</span></h1>
+        <p class="tagline">Four days of heavy music in the Walloon countryside.</p>
+        <a class="cta" href="#tickets">Get tickets</a>
+      </div>
+    </section>
+
+    <section id="lineup" aria-labelledby="lineup-title">
+      <h2 id="lineup-title">Line up</h2>
+      <div class="filters" id="day-filters" role="group" aria-label="Filter the line up by day"></div>
+      <ul class="grid" id="lineup-list"></ul>
+    </section>
+
+    <section id="timetable" class="alt" aria-labelledby="timetable-title">
+      <h2 id="timetable-title">Timetable</h2>
+      <div class="filters" id="day-tabs" role="tablist" aria-label="Day"></div>
+      <div class="stages" id="stages" role="tabpanel"></div>
+    </section>
+
+    <section id="tickets" aria-labelledby="tickets-title">
+      <h2 id="tickets-title">Tickets</h2>
+      <ul class="tickets" id="ticket-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Elisa Leocata – a fictional festival, created for my web design portfolio. Bands and details are invented.</p>
+    <details class="credits">
+      <summary>Photo credits</summary>
+      <p>Concert photos from <a href="https://unsplash.com" rel="noopener">Unsplash</a>, used under the Unsplash licence. They show other artists, not the invented bands.</p>
+      <ul id="credits"></ul>
+    </details>
+  </footer>
+
+  <dialog id="pay" aria-labelledby="pay-title">
+    <form id="pay-form">
+      <h2 id="pay-title">Buy your ticket</h2>
+      <p id="pay-item" class="item"></p>
+      <p class="demo">Demo only: nothing is sent or stored. Do not enter real card details.</p>
+      <label>Name on card <input name="name" autocomplete="cc-name" required></label>
+      <label>Card number <input name="number" inputmode="numeric" autocomplete="cc-number" required></label>
+      <div class="row">
+        <label>Expiry date <input name="exp" placeholder="MM / YY" autocomplete="cc-exp" required></label>
+        <label>Security code <input name="cvc" inputmode="numeric" autocomplete="cc-csc" required></label>
+      </div>
+      <output id="pay-status" aria-live="polite"></output>
+      <div class="row actions">
+        <button type="button" class="chip" id="pay-close">Cancel</button>
+        <button type="submit" class="buy">Pay</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
